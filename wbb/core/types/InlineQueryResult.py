@@ -30,10 +30,10 @@ from pyrogram.types import InlineQueryResult
 
 
 class InlineQueryResultAudio(InlineQueryResult):
-    """Link to an audio.
-    By default, this audio will be sent by the user with optional caption.
-    Alternatively, you can use *input_message_content* to send a message
-    with the specified content instead of the audio.
+    """ʟɪɴᴋ ᴛᴏ ᴀɴ ᴀᴜᴅɪᴏ.
+    ʙʏ ᴅᴇꜰᴀᴜʟᴛ, ᴛʜɪꜱ ᴀᴜᴅɪᴏ ᴡɪʟʟ ʙᴇ ꜱᴇɴᴛ ʙʏ ᴛʜᴇ ᴜꜱᴇʀ ᴡɪᴛʜ ᴏᴘᴛɪᴏɴᴀʟ ᴄᴀᴘᴛɪᴏɴ.
+    ᴀʟᴛᴇʀɴᴀᴛɪᴠᴇʟʏ, ʏᴏᴜ ᴄᴀɴ ᴜꜱᴇ *input_message_content* ᴛᴏ ꜱᴇɴᴅ ᴀ ᴍᴇꜱꜱᴀɢᴇ
+    ᴡɪᴛʜ ᴛʜᴇ ꜱᴘᴇᴄɪꜰɪᴇᴅ ᴄᴏɴᴛᴇɴᴛ ɪɴꜱᴛᴇᴀᴅ ᴏꜰ ᴛʜᴇ ᴀᴜᴅɪᴏ.
     Parameters:
         audio_url (``str``):
             A valid URL for the embedded audio player or audio file.
