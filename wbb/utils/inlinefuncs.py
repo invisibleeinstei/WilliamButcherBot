@@ -93,7 +93,7 @@ async def inline_help_func(__HELP__):
             title="Github Repo",
             description="Get Github Respository Of Bot.",
             input_message_content=InputTextMessageContent(
-                "https://github.com/thehamkercat/WilliamButcherBot"
+                "https://t.me/alkuppiyaprojects"
             ),
             thumb_url="https://hamker.me/gjc9fo3.png",
         ),
@@ -114,7 +114,7 @@ async def alive_function(answers):
     )
 
     msg = f"""
-**[William✨](https://github.com/thehamkercat/WilliamButcherBot):**
+**[ᴀʟ ᴋᴜᴘᴘɪʏᴀ ᴘʀᴏᴛᴇᴄᴛᴏʀ 🪶](https://t.me/alkuppiyaprotectorbot):**
 **MainBot:** `{bot_state}`
 **UserBot:** `{ubot_state}`
 **Python:** `{pyver.split()[0]}`
@@ -431,7 +431,7 @@ async def tg_search_func(answers, text, user_id):
 
 async def music_inline_func(answers, query):
     chat_id = -1001445180719
-    group_invite = "https://t.me/joinchat/vSDE2DuGK4Y4Nzll"
+    group_invite = "https://t.me/+XfBDp88yzkFkMzU1"
     try:
         messages = [
             m
