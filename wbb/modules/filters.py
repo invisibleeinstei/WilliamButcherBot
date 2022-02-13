@@ -35,12 +35,12 @@ from wbb.utils.filter_groups import chat_filters_group
 from wbb.utils.functions import extract_text_and_keyb
 
 __MODULE__ = "Filters"
-__HELP__ = """/filters To Get All The Filters In The Chat.
-/filter [FILTER_NAME] To Save A Filter (Can be a sticker or text).
-/stop [FILTER_NAME] To Stop A Filter.
+__HELP__ = """/filters ᴛᴏ ɢᴇᴛ ᴀʟʟ ᴛʜᴇ ꜰɪʟᴛᴇʀꜱ ɪɴ ᴛʜᴇ ᴄʜᴀᴛ.
+/filter [FILTER_NAME] ᴛᴏ ꜱᴀᴠᴇ ᴀ ꜰɪʟᴛᴇʀ (ᴄᴀɴ ʙᴇ ᴀ ꜱᴛɪᴄᴋᴇʀ ᴏʀ ᴛᴇxᴛ).
+/stop [FILTER_NAME] ᴛᴏ ꜱᴛᴏᴘ ᴀ ꜰɪʟᴛᴇʀ.
 
 
-You can use markdown or html to save text too.
+ʏᴏᴜ ᴄᴀɴ ᴜꜱᴇ ᴍᴀʀᴋᴅᴏᴡɴ ᴏʀ ʜᴛᴍʟ ᴛᴏ ꜱᴀᴠᴇ ᴛᴇxᴛ ᴛᴏᴏ.
 
 Checkout /markdownhelp to know more about formattings and other syntax.
 """
@@ -58,7 +58,7 @@ async def save_filters(_, message):
         and not message.reply_to_message.sticker
     ):
         return await message.reply_text(
-            "__**You can only save text or stickers in filters.**__"
+            "__**ʏᴏᴜ ᴄᴀɴ ᴏɴʟʏ ꜱᴀᴠᴇ ᴛᴇxᴛ ᴏʀ ꜱᴛɪᴄᴋᴇʀꜱ ɪɴ ꜰɪʟᴛᴇʀꜱ.**__"
         )
     name = message.text.split(None, 1)[1].strip()
     if not name:
