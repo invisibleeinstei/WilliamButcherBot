@@ -38,9 +38,9 @@ from wbb.utils.filter_groups import blacklist_filters_group
 
 __MODULE__ = "Blacklist"
 __HELP__ = """
-/blacklisted - Get All The Blacklisted Words In The Chat.
-/blacklist [WORD|SENTENCE] - Blacklist A Word Or A Sentence.
-/whitelist [WORD|SENTENCE] - Whitelist A Word Or A Sentence.
+/blacklisted - ɢᴇᴛ ᴀʟʟ ᴛʜᴇ ʙʟᴀᴄᴋʟɪꜱᴛᴇᴅ ᴡᴏʀᴅꜱ ɪɴ ᴛʜᴇ ᴄʜᴀᴛ.
+/blacklist [WORD|SENTENCE] - ʙʟᴀᴄᴋʟɪꜱᴛ ᴀ ᴡᴏʀᴅ ᴏʀ ᴀ ꜱᴇɴᴛᴇɴᴄᴇ.
+/whitelist [WORD|SENTENCE] - ᴡʜɪᴛᴇʟɪꜱᴛ ᴀ ᴡᴏʀᴅ ᴏʀ ᴀ ꜱᴇɴᴛᴇɴᴄᴇ.
 """
 
 
@@ -68,9 +68,9 @@ async def save_filters(_, message):
 async def get_filterss(_, message):
     data = await get_blacklisted_words(message.chat.id)
     if not data:
-        await message.reply_text("**No blacklisted words in this chat.**")
+        await message.reply_text("**ɴᴏ ʙʟᴀᴄᴋʟɪꜱᴛᴇᴅ ᴡᴏʀᴅꜱ ɪɴ ᴛʜɪꜱ ᴄʜᴀᴛ.**")
     else:
-        msg = f"List of blacklisted words in {message.chat.title}\n"
+        msg = f"ʟɪꜱᴛ ᴏꜰ ʙʟᴀᴄᴋʟɪꜱᴛᴇᴅ ᴡᴏʀᴅꜱ ɪɴ {message.chat.title}\n"
         for word in data:
             msg += f"**-** `{word}`\n"
         await message.reply_text(msg)
