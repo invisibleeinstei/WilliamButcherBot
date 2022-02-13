@@ -36,27 +36,27 @@ from wbb.utils.functions import (extract_user, extract_user_and_reason,
                                  time_converter)
 
 __MODULE__ = "Admin"
-__HELP__ = """/ban - Ban A User
-/dban - Delete the replied message banning its sender
-/tban - Ban A User For Specific Time
-/unban - Unban A User
-/warn - Warn A User
-/dwarn - Delete the replied message warning its sender
-/rmwarns - Remove All Warning of A User
-/warns - Show Warning Of A User
-/kick - Kick A User
-/dkick - Delete the replied message kicking its sender
-/purge - Purge Messages
-/del - Delete Replied Message
-/promote - Promote A Member
-/fullpromote - Promote A Member With All Rights
-/demote - Demote A Member
-/pin - Pin A Message
-/mute - Mute A User
-/tmute - Mute A User For Specific Time
-/unmute - Unmute A User
-/ban_ghosts - Ban Deleted Accounts
-/report | @admins | @admin - Report A Message To Admins."""
+__HELP__ = """/ban - ʙᴀɴ ᴀ ᴜꜱᴇʀ
+/dban - ᴅᴇʟᴇᴛᴇ ᴛʜᴇ ʀᴇᴘʟɪᴇᴅ ᴍᴇꜱꜱᴀɢᴇ ʙᴀɴɴɪɴɢ ɪᴛꜱ ꜱᴇɴᴅᴇʀ
+/tban - ʙᴀɴ ᴀ ᴜꜱᴇʀ ꜰᴏʀ ꜱᴘᴇᴄɪꜰɪᴄ ᴛɪᴍᴇ
+/unban - ᴜɴʙᴀɴ ᴀ ᴜꜱᴇʀ
+/warn - ᴡᴀʀɴ ᴀ ᴜꜱᴇʀ
+/dwarn - ᴅᴇʟᴇᴛᴇ ᴛʜᴇ ʀᴇᴘʟɪᴇᴅ ᴍᴇꜱꜱᴀɢᴇ ᴡᴀʀɴɪɴɢ ɪᴛꜱ ꜱᴇɴᴅᴇʀ
+/rmwarns - ʀᴇᴍᴏᴠᴇ ᴀʟʟ ᴡᴀʀɴɪɴɢ ᴏꜰ ᴀ ᴜꜱᴇʀ
+/warns - ꜱʜᴏᴡ ᴡᴀʀɴɪɴɢ ᴏꜰ ᴀ ᴜꜱᴇʀ
+/kick - ᴋɪᴄᴋ ᴀ ᴜꜱᴇʀ
+/dkick - ᴅᴇʟᴇᴛᴇ ᴛʜᴇ ʀᴇᴘʟɪᴇᴅ ᴍᴇꜱꜱᴀɢᴇ ᴋɪᴄᴋɪɴɢ ɪᴛꜱ ꜱᴇɴᴅᴇʀ
+/purge - ᴘᴜʀɢᴇ ᴍᴇꜱꜱᴀɢᴇꜱ
+/del - ᴅᴇʟᴇᴛᴇ ʀᴇᴘʟɪᴇᴅ ᴍᴇꜱꜱᴀɢᴇ
+/promote - ᴘʀᴏᴍᴏᴛᴇ ᴀ ᴍᴇᴍʙᴇʀ
+/fullpromote - ᴘʀᴏᴍᴏᴛᴇ ᴀ ᴍᴇᴍʙᴇʀ ᴡɪᴛʜ ᴀʟʟ ʀɪɢʜᴛꜱ
+/demote - ᴅᴇᴍᴏᴛᴇ ᴀ ᴍᴇᴍʙᴇʀ
+/pin - ᴘɪɴ ᴀ ᴍᴇꜱꜱᴀɢᴇ
+/mute - ᴍᴜᴛᴇ ᴀ ᴜꜱᴇʀ
+/tmute - ᴍᴜᴛᴇ ᴀ ᴜꜱᴇʀ ꜰᴏʀ ꜱᴘᴇᴄɪꜰɪᴄ ᴛɪᴍᴇ
+/unmute - ᴜɴᴍᴜᴛᴇ ᴀ ᴜꜱᴇʀ
+/ban_ghosts - ʙᴀɴ ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛꜱ
+/report | @admins | @admin - ʀᴇᴘᴏʀᴛ ᴀ ᴍᴇꜱꜱᴀɢᴇ ᴛᴏ ᴀᴅᴍɪɴꜱ."""
 
 
 async def member_permissions(chat_id: int, user_id: int):
@@ -183,16 +183,16 @@ async def purgeFunc(_, message: Message):
 async def kickFunc(_, message: Message):
     user_id, reason = await extract_user_and_reason(message)
     if not user_id:
-        return await message.reply_text("I can't find that user.")
+        return await message.reply_text("ɪ ᴄᴀɴ'ᴛ ꜰɪɴᴅ ᴛʜᴀᴛ ᴜꜱᴇʀ.")
     if user_id == BOT_ID:
         return await message.reply_text(
-            "I can't kick myself, i can leave if you want."
+            "ɪ ᴄᴀɴ'ᴛ ᴋɪᴄᴋ ᴍʏꜱᴇʟꜰ, ɪ ᴄᴀɴ ʟᴇᴀᴠᴇ ɪꜰ ʏᴏᴜ ᴡᴀɴᴛ.😅🤦🏻"
         )
     if user_id in SUDOERS:
-        return await message.reply_text("You Wanna Kick The Elevated One?")
+        return await message.reply_text("ʏᴏᴜ ᴡᴀɴɴᴀ ᴋɪᴄᴋ ᴛʜᴇ ᴇʟᴇᴠᴀᴛᴇᴅ ᴏɴᴇ?")
     if user_id in (await list_admins(message.chat.id)):
         return await message.reply_text(
-            "I can't kick an admin, You know the rules, so do i."
+            "ɪ ᴄᴀɴ'ᴛ ᴋɪᴄᴋ ᴀɴ ᴀᴅᴍɪɴ, ʏᴏᴜ ᴋɴᴏᴡ ᴛʜᴇ ʀᴜʟᴇꜱ, ꜱᴏ ᴅᴏ ɪ.🙆🏻"
         )
     mention = (await app.get_users(user_id)).mention
     msg = f"""
@@ -220,18 +220,18 @@ async def banFunc(_, message: Message):
     user_id, reason = await extract_user_and_reason(message, sender_chat=True)
 
     if not user_id:
-        return await message.reply_text("I can't find that user.")
+        return await message.reply_text("ɪ ᴄᴀɴ'ᴛ ꜰɪɴᴅ ᴛʜᴀᴛ ᴜꜱᴇʀ.")
     if user_id == BOT_ID:
         return await message.reply_text(
-            "I can't ban myself, i can leave if you want."
+            "ɪ ᴄᴀɴ'ᴛ ʙᴀɴ ᴍʏꜱᴇʟꜰ, ɪ ᴄᴀɴ ʟᴇᴀᴠᴇ ɪꜰ ʏᴏᴜ ᴡᴀɴᴛ.😅🤦🏻"
         )
     if user_id in SUDOERS:
         return await message.reply_text(
-            "You Wanna Ban The Elevated One?, RECONSIDER!"
+            "ʏᴏᴜ ᴡᴀɴɴᴀ ʙᴀɴ ᴛʜᴇ ᴇʟᴇᴠᴀᴛᴇᴅ ᴏɴᴇ?, ʀᴇᴄᴏɴꜱɪᴅᴇʀ!"
         )
     if user_id in (await list_admins(message.chat.id)):
         return await message.reply_text(
-            "I can't ban an admin, You know the rules, so do i."
+            "ɪ ᴄᴀɴ'ᴛ ʙᴀɴ ᴀɴ ᴀᴅᴍɪɴ, ʏᴏᴜ ᴋɴᴏᴡ ᴛʜᴇ ʀᴜʟᴇꜱ, ꜱᴏ ᴅᴏ ɪ.🙆🏻"
         )
 
     try:
@@ -288,7 +288,7 @@ async def unbanFunc(_, message: Message):
         user = message.reply_to_message.from_user.id
     else:
         return await message.reply_text(
-            "Provide a username or reply to a user's message to unban."
+            "ᴘʀᴏᴠɪᴅᴇ ᴀ ᴜꜱᴇʀɴᴀᴍᴇ ᴏʀ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜꜱᴇʀ'ꜱ ᴍᴇꜱꜱᴀɢᴇ ᴛᴏ ᴜɴʙᴀɴ."
         )
     await message.chat.unban_member(user)
     umention = (await app.get_users(user)).mention
@@ -320,7 +320,7 @@ async def promoteFunc(_, message: Message):
     user_id = await extract_user(message)
     umention = (await app.get_users(user_id)).mention
     if not user_id:
-        return await message.reply_text("I can't find that user.")
+        return await message.reply_text("ɪ ᴄᴀɴ'ᴛ ꜰɪɴᴅ ᴛʜᴀᴛ ᴜꜱᴇʀ.")
     bot = await app.get_chat_member(message.chat.id, BOT_ID)
     if user_id == BOT_ID:
         return await message.reply_text("I can't promote myself.")
