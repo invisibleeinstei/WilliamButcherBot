@@ -34,8 +34,8 @@ from wbb.utils.functions import get_file_id_from_message
 
 __MODULE__ = "Storage"
 __HELP__ = """
-Upload unlimited files smaller than 100MB
-And get a download link
+ᴜᴘʟᴏᴀᴅ ᴜɴʟɪᴍɪᴛᴇᴅ ꜰɪʟᴇꜱ ꜱᴍᴀʟʟᴇʀ ᴛʜᴀɴ 100ᴍʙ
+ᴀɴᴅ ɢᴇᴛ ᴀ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ
 
 **Usage:**
     /upload [url|Reply to a file]
@@ -45,7 +45,7 @@ UPLOAD_LOCK = Lock()
 
 
 async def upload(m: Message, file: str = None, url: str = None):
-    err = "Something went wrong"
+    err = "ꜱᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ ❓"
     try:
         resp = await arq.upload(file=file, url=url)
     except Exception:
@@ -75,7 +75,7 @@ async def arq_upload(_, message):
     if message.reply_to_message:
         if UPLOAD_LOCK.locked():
             return await message.reply(
-                "One upload is already in progress, please try again later"
+                "ᴏɴᴇ ᴜᴘʟᴏᴀᴅ ɪꜱ ᴀʟʀᴇᴀᴅʏ ɪɴ ᴘʀᴏɢʀᴇꜱꜱ, ᴘʟᴇᴀꜱᴇ ᴛʀʏ ᴀɢᴀɪɴ ʟᴀᴛᴇʀ 💭"
             )
         async with UPLOAD_LOCK:
             r = message.reply_to_message
