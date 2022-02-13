@@ -10,12 +10,12 @@ __MODULE__ = "Blacklist Chat"
 __HELP__ = """
 **THIS MODULE IS ONLY FOR DEVS**
 
-Use this module to make the bot leave some chats
-in which you don't want it to be in.
+ᴜꜱᴇ ᴛʜɪꜱ ᴍᴏᴅᴜʟᴇ ᴛᴏ ᴍᴀᴋᴇ ᴛʜᴇ ʙᴏᴛ ʟᴇᴀᴠᴇ ꜱᴏᴍᴇ ᴄʜᴀᴛꜱ
+ɪɴ ᴡʜɪᴄʜ ʏᴏᴜ ᴅᴏɴ'ᴛ ᴡᴀɴᴛ ɪᴛ ᴛᴏ ʙᴇ ɪɴ.
 
-/blacklist_chat [CHAT_ID] - Blacklist a chat.
-/whitelist_chat [CHAT_ID] - Whitelist a chat.
-/blacklisted - Show blacklisted chats.
+/blacklist_chat [CHAT_ID] - ʙʟᴀᴄᴋʟɪꜱᴛ ᴀ ᴄʜᴀᴛ.
+/whitelist_chat [CHAT_ID] - ᴡʜɪᴛᴇʟɪꜱᴛ ᴀ ᴄʜᴀᴛ.
+/blacklisted - ꜱʜᴏᴡ ʙʟᴀᴄᴋʟɪꜱᴛᴇᴅ ᴄʜᴀᴛꜱ.
 """
 
 
@@ -28,13 +28,13 @@ async def blacklist_chat_func(_, message: Message):
         )
     chat_id = int(message.text.strip().split()[1])
     if chat_id in await blacklisted_chats():
-        return await message.reply_text("Chat is already blacklisted.")
+        return await message.reply_text("ᴄʜᴀᴛ ɪꜱ ᴀʟʀᴇᴀᴅʏ ʙʟᴀᴄᴋʟɪꜱᴛᴇᴅ.")
     blacklisted = await blacklist_chat(chat_id)
     if blacklisted:
         return await message.reply_text(
-            "Chat has been successfully blacklisted"
+            "ᴄʜᴀᴛ ʜᴀꜱ ʙᴇᴇɴ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ʙʟᴀᴄᴋʟɪꜱᴛᴇᴅ"
         )
-    await message.reply_text("Something wrong happened, check logs.")
+    await message.reply_text("ꜱᴏᴍᴇᴛʜɪɴɢ ᴡʀᴏɴɢ ʜᴀᴘᴘᴇɴᴇᴅ, ᴄʜᴇᴄᴋ ʟᴏɢꜱ.")
 
 
 @app.on_message(filters.command("whitelist_chat") & filters.user(SUDOERS))
@@ -46,13 +46,13 @@ async def whitelist_chat_func(_, message: Message):
         )
     chat_id = int(message.text.strip().split()[1])
     if chat_id not in await blacklisted_chats():
-        return await message.reply_text("Chat is already whitelisted.")
+        return await message.reply_text("ᴄʜᴀᴛ ɪꜱ ᴀʟʀᴇᴀᴅʏ ᴡʜɪᴛᴇʟɪꜱᴛᴇᴅ.")
     whitelisted = await whitelist_chat(chat_id)
     if whitelisted:
         return await message.reply_text(
-            "Chat has been successfully whitelisted"
+            "ᴄʜᴀᴛ ʜᴀꜱ ʙᴇᴇɴ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴡʜɪᴛᴇʟɪꜱᴛᴇᴅ"
         )
-    await message.reply_text("Something wrong happened, check logs.")
+    await message.reply_text("ꜱᴏᴍᴇᴛʜɪɴɢ ᴡʀᴏɴɢ ʜᴀᴘᴘᴇɴᴇᴅ, ᴄʜᴇᴄᴋ ʟᴏɢꜱ.")
 
 
 @app.on_message(filters.command("blacklisted_chats") & filters.user(SUDOERS))
